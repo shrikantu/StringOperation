@@ -1,0 +1,42 @@
+package com.stringcompare;
+
+public class EmployeeCompare implements Comparable<EmployeeCompare> {
+
+	private String name;
+	
+	private String age;
+	private int id;
+	
+		
+	public EmployeeCompare(int id,String name, String age) {
+		super();
+		this.name = name;
+		this.age = age;
+		this.id = id;
+	}
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public String getAge() {
+		return age;
+	}
+	public void setAge(String age) {
+		this.age = age;
+	}
+	@Override
+	public int compareTo(EmployeeCompare o) {
+		return o.getName().compareTo(this.name);
+	}
+	
+	
+	
+}
